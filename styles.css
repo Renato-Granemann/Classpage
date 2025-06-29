@@ -1,0 +1,219 @@
+/* ======================================= RESET ======================================= */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ======================================= TEXTOS ======================================= */
+
+.main-content-header h1  {
+    font-size: 2rem;
+    color: black;
+}
+
+.main-content-header p {
+    margin: 1rem;
+    color: rgb(28, 28, 28);
+    font-size: 1.2rem;
+}
+
+li a:link,
+li a:active,
+li a:visited {
+    text-decoration: none;
+    color: rgb(182, 181, 181);
+    font-size: 1rem;
+}
+
+li a:hover,
+a.atual:link,
+a.atual:hover,
+a.atual:visited,
+a.atual:active {
+    color: white;
+    font-weight: 600;
+}
+
+.link:link,
+.link:visited {
+    text-decoration: none;
+    color: rgb(57, 57, 238)
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.link:active {
+    color: red;
+    text-decoration: underline;
+}
+/* ===================== GERAL ====================== */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #efefef;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    border-bottom: solid 1px black;
+    align-items: center;
+    box-shadow: 0 2px 10px black;
+    position: sticky;
+    background-color: #2D3047;
+    z-index: 100;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2.2rem;
+}
+
+.main-content {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.3rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    grid-auto-flow: row;
+    padding: 2rem;
+}
+
+.item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+/* ========================== CARDS INDEX ==================== */
+
+.estudante {
+    width: 150px;
+}
+
+.estudante:link,
+.estudante:active,
+.estudante:hover,
+.estudante:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.imagem-estudante {
+    width: 100px;
+    border-radius: 1rem;
+}
+
+/* ============ HORÁRIOS ================= */
+
+.horarios {
+    align-items: center;
+}
+
+table {
+    border: 1px solid black;
+    padding: 0.5rem;
+    width: 100%
+}
+
+th, td {
+    border: .3px solid black;
+    padding: 0.6rem;
+}
+
+.anotacoes th,
+.anotacoes td {
+    width: 50%;
+}
+tbody tr:nth-child(even),
+thead tr:nth-child(1) {
+    background-color: #d5d4d4;
+}
+
+/* calendario (classes) */
+
+tr.concluida:nth-child(odd) {
+    background-color: #90ee90;  
+}
+
+tr.concluida:nth-child(even) {
+    background-color: #c1f0c1;  
+}
+
+tr.pendente:nth-child(odd) {
+    background-color: #ff7f7f;
+}
+
+tr.pendente:nth-child(even) {
+    background-color: #ffb3b3;
+}
+
+
+/* ========== MATERIAIS ============ */
+.materiais li{
+    list-style: none;
+}
+
+.materia li {
+    list-style-type: square;
+    list-style-position: inside;
+    transform: translateX(3rem);
+    font-size: 1rem;
+}
+.materiais .titulo-principal {
+    margin-bottom: 2rem;
+}
+.materiais .main-content-body {
+    text-align: left;
+    max-width: 90%;
+}
+
+.materiais .materiais-materia {
+    font-size: 1rem;
+}
+
+/* ================= calendário ================== */
+
+.calendario .main-content-body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 5rem;
+    gap: 2rem;
+    justify-content: center;
+
+}
+
+.calendario .main-content-body a.trimestre {
+    display: inline-grid;
+    height: 150px;
+    width: 150px;
+    place-items: center; 
+}
